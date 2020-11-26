@@ -41,6 +41,8 @@ tokenC1:
     jne     comma                   ;   ||
     ;--
     mov     virgula, 1              ; Atualiza flag de virgula
+    cmp     count, 0                ;
+    jne     token_continue          ;
     jmp     readingLoop             ;   ||
 comma:
     mov     virgula, 0              ; Atualiza flag de virgula
